@@ -1,0 +1,126 @@
+@use "globals" as var;
+
+header {
+  width: 100vw;
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    width: 100%;
+
+    .nav-brand {
+      width: 50%;
+      margin: 0 auto;
+
+      .logo {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // object-fit: cover;
+      }
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      padding: 0 2rem;
+      margin-bottom: 4rem;
+      // display: none;
+
+      .items {
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        outline: none;
+        font-size: 1.2rem;
+        color: var.$grey_7;
+        font-weight: 400;
+        font-family: sans-serif;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+    .sidebar {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
+
+      .nav-brand {
+        width: 150px;
+        float: left;
+      }
+      .links {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+        font-size: 1.5rem;
+        color: var.$grey_7;
+      }
+      .sidebar {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3rem;
+        padding: 4rem 0;
+        background: var.$white;
+        transition: var.$transition;
+        transform: translate(-100%);
+
+        &-show {
+          transform: translate(0%);
+        }
+        .items {
+          text-transform: uppercase;
+          letter-spacing: 1.8px;
+          outline: none;
+          font-size: 1.2rem;
+          color: var.$grey_7;
+          font-weight: 400;
+          font-family: sans-serif;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+        .cancel {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          font-size: 1.5rem;
+
+          svg{
+            color: var.$grey_7;
+          }
+        }
+      }
+    }
+  }
+}
+
+//! =====================================MEDIA QUERIES========================================================= /
