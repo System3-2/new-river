@@ -1,0 +1,81 @@
+@use "globals" as var;
+
+.about-container {
+  margin: 3.5rem;
+
+  .about-tag {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var.$grey_7;
+    color: var.$grey_7;
+    font-weight: 600;
+  }
+
+  .about-item {
+    margin: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+  }
+
+  .about-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .about-text {
+    h3 {
+      font-weight: 600;
+      color: var.$grey_7;
+    }
+    p {
+      color: var.$grey_7;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 760px) {
+  .about-container {
+    margin: 2.5rem;
+  
+    .about-tag {
+      padding: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var.$grey_7;
+      color: var.$grey_7;
+      font-weight: 600;
+    }
+  
+    .about-item {
+      margin: 1rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      height: auto;
+    }
+  
+    .about-img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    } 
+}
+}

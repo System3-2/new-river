@@ -1,0 +1,61 @@
+@use "globals" as var;
+
+.media-container {
+  margin: 3.5rem;
+
+  .media-tag {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var.$grey_7;
+    color: var.$grey_7;
+    font-weight: 600;
+  }
+
+  .media-item {
+    margin: 2rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    .media-img {
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .media-container {
+    margin: 1.5rem;
+
+    .media-tag {
+      padding: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var.$grey_7;
+      color: var.$grey_7;
+      font-weight: 600;
+    }
+
+    .media-item {
+      margin: .5rem;
+      padding: .5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+
+      .media-img {
+        height: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

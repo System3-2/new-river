@@ -16,7 +16,9 @@ const Navbar = () => {
       <nav className='navbar'>
 
         <div className="nav-brand">
-          <img className='logo' src="https://cdn.artcld.com/img/3qlp8sma8zq6t4smsigu.jpg" alt="logo" />
+          <Link to={"/"}>
+            <img className='logo' src="https://cdn.artcld.com/img/3qlp8sma8zq6t4smsigu.jpg" alt="logo" />
+          </Link>
         </div>
 
         <ul className="links">
@@ -30,7 +32,7 @@ const Navbar = () => {
           <FaBars />
         </div>
 
-        <ul className={show ? 'sidebar sidebar-show' : 'sidebar'}>
+        <aside className={show ? 'sidebar sidebar-show' : 'sidebar'}>
           <Link to="/" onClick={toggleSidebar}><li className="items">Home</li></Link>
           <Link to="/about" onClick={toggleSidebar}><li className="items">About</li></Link>
           <Link to="/media" onClick={toggleSidebar}><li className="items">Media</li></Link>
@@ -39,7 +41,7 @@ const Navbar = () => {
           <div className="cancel" onClick={toggleSidebar}>
             <MdCancel className='cancel' />
           </div>
-        </ul>
+        </aside>
       </nav>
     </header>
   )
