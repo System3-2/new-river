@@ -17,7 +17,7 @@ const Navbar = () => {
 
         <div className="nav-brand">
           <Link to={"/"}>
-            <img className='logo' src="https://cdn.artcld.com/img/3qlp8sma8zq6t4smsigu.jpg" alt="logo" />
+            <img className='logo' src="https://pbs.twimg.com/media/FoMJJ22XgAARDVZ?format=jpg&name=small" alt="logo" />
           </Link>
         </div>
 

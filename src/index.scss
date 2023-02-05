@@ -18,15 +18,17 @@ header {
     width: 100%;
 
     .nav-brand {
-      width: 50%;
-      margin: 0 auto;
+      width: 200px;
+      float: left;
+      // margin: 0 auto;
 
       .logo {
-        width: 60%;
+        width: 260px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 40%;
         // object-fit: cover;
       }
     }
